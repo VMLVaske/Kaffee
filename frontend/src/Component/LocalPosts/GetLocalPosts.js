@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import posts from './posts.js';
+import './Style.css'
 // get posts from online api
 // it's return a json file
 class GetLocalPosts extends Component {

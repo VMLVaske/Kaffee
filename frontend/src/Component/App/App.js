@@ -29,6 +29,7 @@ class App extends React.Component {
     switch(this.state.render) {
       case 'login': return <Login/>
       case 'register': return <Register/>
+      default: return null;
     }
   }
 
@@ -51,7 +52,7 @@ class App extends React.Component {
           </div>
         </header>
 
-        <body>
+        <body className="StorageBody">
           <h1 className="localStorage">Local Storage</h1>
           <GetLocalPosts/>
           <br/>

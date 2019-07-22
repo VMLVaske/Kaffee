@@ -22,6 +22,7 @@ class Login extends React.Component {
   _renderSubComp() {
     switch(this.state.render) {
       case 'snacks': return <Snacks/>
+      default: return null
     }
   }
 
