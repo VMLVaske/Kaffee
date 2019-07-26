@@ -5,6 +5,10 @@ import './Style.css';
 import Login from './../Login/Login';
 import Register from './../Register/Register';
 
+// JSON Experimente
+import GetOnlinePosts from './../OnlinePosts/GetOnlinePosts';
+import GetLocalPosts from './../LocalPosts/GetLocalPosts';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +29,7 @@ class App extends React.Component {
     switch(this.state.render) {
       case 'login': return <Login/>
       case 'register': return <Register/>
+      default: return null;
     }
   }
 
@@ -46,6 +51,14 @@ class App extends React.Component {
             {this._renderSubComp()}
           </div>
         </header>
+
+        <body className="StorageBody">
+          <h1 className="localStorage">Local Storage</h1>
+          <GetLocalPosts/>
+          <br/>
+          <h1 className="externalStorage">External Storage</h1>
+          <GetOnlinePosts/>
+        </body>
 
 
         <footer className="App-footer">

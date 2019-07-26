@@ -43,3 +43,8 @@
 .ButtonContainer {
   align-items: center;
 }
+
+.StorageBody {
+  background-color: #87b6a7;
+  color: #f7d08a;
+}
