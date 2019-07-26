@@ -1,0 +1,14 @@
+.App-navbar {
+  background-color: #87b6a7;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f7d08a;
+}
+
+.App-link {
+  color: #f79f79;
+}
