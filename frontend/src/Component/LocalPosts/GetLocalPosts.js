@@ -19,8 +19,8 @@ class GetLocalPosts extends Component {
                     posts.map(post => (
                         <li key={post.id} align="start">
                             <div>
-                                <p className="title">{post.title}</p>
-                                <p className="body">{post.body}</p>
+                                <p className="m_id">{post.m_id}</p>
+                                <p className="email">{post.email}</p>
                             </div>
                         </li>
                     ))
