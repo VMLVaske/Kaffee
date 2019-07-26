@@ -1,13 +1,13 @@
 .item {
   color: #f7d08a;
   align-items: center;
-  background-color: #87b6a7; 
+  background-color: #87b6a7;
 }
 
-.title {
+.m_id {
   background-color: #f79f79;
 }
 
-.body {
+.email {
   background-color: #f79f79;
 }

@@ -8,15 +8,22 @@ class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: true
+      isLoggedIn: false,
+      m_id: null
     };
 
     // This binding is necessary to make 'this' work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleClick(compName, e) {
-    this.setState({render:compName});
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
   }
 
   _renderSubComp() {
@@ -27,9 +34,20 @@ class Login extends React.Component {
   }
 
   render() {
-    return <div>
-      Bitte den Mitarbeiterausweis vor den NFC Reader halten.
-    </div>;
+    return (
+      <div>
+        Bitte Unique Identifier eingeben:
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            M_ID (z.B. 1177):
+            <input type="text" name="name" value={this.state.m_id} onChange={this.handleChange}/>
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        <p>Value: {this.state.value}</p>
+        <br/>
+        <p>Name: {this.state.name} </p>
+      </div>) ;
   }
 }
 
